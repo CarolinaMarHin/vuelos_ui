@@ -1,0 +1,55 @@
+<div class="container container-center">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-horizontal" (ngSubmit)="onSubmit(flightFormFlight)" #flightFormFlight="ngForm">
+                    <fieldset>
+                        <h3 class="text-center header">Nuevo Vuelo</h3>
+
+                        <div class="input-group input-group-sm mb-3 div-form-control">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Numero: </span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="Small" id="numero" name="numero" [(ngModel)]="vuelo.idVuelo" required>
+                        </div>
+                          
+
+                        <div class="input-group input-group-sm mb-3 div-form-control">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Origen: </span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Small" id="origen" name="origen" [(ngModel)]="vuelo.origen" required>
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3 div-form-control">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Destino: </span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Small" id="destino" name="destino" [(ngModel)]="vuelo.destino" required>
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3 div-form-control">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Salida: </span>
+                            </div>
+                            <input type="date" class="form-control" aria-label="Small" id="fechasalida" name="fechasalida" [(ngModel)]="vuelo.fechaSalida" required>
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3 div-form-control">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Llegada: </span>
+                            </div>
+                            <input type="date" class="form-control" aria-label="Small" id="fechallegada" name="fechallegada" [(ngModel)]="vuelo.fechaLlegada" required>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-form-control" [disabled]="!flightFormFlight.form.valid">Aceptar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

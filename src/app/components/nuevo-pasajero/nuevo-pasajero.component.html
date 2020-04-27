@@ -1,0 +1,55 @@
+<div class="container container-center">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-horizontal" (ngSubmit)="onSubmit(flightFormPassenger)" #flightFormPassenger="ngForm">
+                    <fieldset>
+                        <h3 class="text-center header">Nuevo Pasajero</h3>
+
+                        <div class="input-group input-group-sm mb-3 div-form-control">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Cedula: </span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="Small" id="cedula" name="cedula" [(ngModel)]="pasajero.idPasajero" required>
+                        </div>
+                          
+
+                        <div class="input-group input-group-sm mb-3 div-form-control">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Nombres: </span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Small" id="nombres" name="nombres" [(ngModel)]="pasajero.nombre" required>
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3 div-form-control">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Apellidos: </span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Small" id="apellidos" name="apellidos" [(ngModel)]="pasajero.apellido" required>
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3 div-form-control">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Correo: </span>
+                            </div>
+                            <input type="email" class="form-control" aria-label="Small" id="correo" name="correo" [(ngModel)]="pasajero.correo" required>
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3 div-form-control">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Edad: </span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="Small" id="edad" name="edad" [(ngModel)]="pasajero.edad" required>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-form-control" [disabled]="!flightFormPassenger.form.valid">Aceptar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
