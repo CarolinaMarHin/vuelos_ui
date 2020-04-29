@@ -5,38 +5,4 @@
   </h1>
   <img width="300" src="/assets/image/logo-avion.jpg">
 </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">Vuelo</th>
-            <th scope="col">Origen</th>
-            <th scope="col">Destino</th>
-            <th scope="col">Fecha Salida</th>
-            <th scope="col">Fecha Llegada</th>
-            <th scope="col">Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let flight of flights;">
-            <th scope="row">{{flight.idVuelo}}</th>
-            <td>{{flight.origen}}</td>
-            <td>{{flight.destino}}</td>
-            <td>{{flight.fechaSalida}}</td>
-            <td>{{flight.fechaLlegada}}</td>
-            <td>
-              <button type="button" class="btn btn-primary">Ver</button>
-              <button type="button" class="btn btn-success">Editar</button>
-              <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
 <router-outlet></router-outlet>
