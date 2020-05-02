@@ -1,16 +1,16 @@
 <div class="container">
     <div class="row">
       <div class="col-12 div-center">
-        <button type="button" class="btn btn-info btn-info-margin" [routerLink]="[ '/nuevopasajero' ]" routerLinkActive="active">Crear pasajero</button>
+        <button type="button" class="btn btn-info btn-info-margin" [routerLink]="[ '/nuevopasajero' ]" routerLinkActive="active">{{"crearpasajero" | translate}}</button>
         <table class="table table-bordered table-center">
           <thead>
             <tr>
-              <th scope="col">Cedula</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Apellido</th>
-              <th scope="col">Edad</th>
-              <th scope="col">Correo</th>
-              <th scope="col">Acciones</th>
+              <th scope="col">{{"cedula" | translate}}</th>
+              <th scope="col">{{"nombre" | translate}}</th>
+              <th scope="col">{{"apellido" | translate}}</th>
+              <th scope="col">{{"edad" | translate}}</th>
+              <th scope="col">{{"correo" | translate}}</th>
+              <th scope="col">{{"acciones" | translate}}</th>
             </tr>
           </thead>
           <tbody>
@@ -21,8 +21,8 @@
               <td>{{pasajero.edad}}</td>
               <td>{{pasajero.correo}}</td>
               <td>
-                <button type="button" class="btn btn-success" [routerLink]="[ '/editarpasajero/', pasajero.idPasajero, pasajero.nombre, pasajero.apellido, pasajero.edad, pasajero.correo ]" routerLinkActive="active">Editar</button>
-                <button type="button" class="btn btn-danger" (click)="eliminarPasajero(pasajero.idPasajero)">Eliminar</button>
+                <button type="button" class="btn btn-success" [routerLink]="[ '/editarpasajero/', pasajero.idPasajero, pasajero.nombre, pasajero.apellido, pasajero.edad, pasajero.correo ]" routerLinkActive="active">{{"editar" | translate}}</button>
+                <button type="button" class="btn btn-danger" (click)="eliminarPasajero(pasajero.idPasajero)">{{"eliminar" | translate}}</button>
               </td>
             </tr>
           </tbody>

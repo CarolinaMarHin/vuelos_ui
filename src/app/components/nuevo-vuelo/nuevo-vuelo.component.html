@@ -4,11 +4,11 @@
             <div class="well well-sm">
                 <form class="form-horizontal" (ngSubmit)="onSubmit()" #flightFormFlight="ngForm">
                     <fieldset>
-                        <h3 class="text-center header">Datos Vuelo</h3>
+                        <h3 class="text-center header">{{"datosvuelo" | translate}}</h3>
 
                         <div class="input-group input-group-sm mb-3 div-form-control">
                             <div class="input-group-prepend">
-                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Numero: </span>
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">{{"numero" | translate}}: </span>
                             </div>
                             <input type="number" class="form-control" aria-label="Small" id="idVuelo" name="idVuelo" [(ngModel)]="vuelo.idVuelo" required>
                         </div>
@@ -16,35 +16,35 @@
 
                         <div class="input-group input-group-sm mb-3 div-form-control">
                             <div class="input-group-prepend">
-                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Origen: </span>
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">{{"origen" | translate}}: </span>
                             </div>
                             <input type="text" class="form-control" aria-label="Small" id="origen" name="origen" [(ngModel)]="vuelo.origen" required>
                         </div>
 
                         <div class="input-group input-group-sm mb-3 div-form-control">
                             <div class="input-group-prepend">
-                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Destino: </span>
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">{{"destino" | translate}}: </span>
                             </div>
                             <input type="text" class="form-control" aria-label="Small" id="destino" name="destino" [(ngModel)]="vuelo.destino" required>
                         </div>
 
                         <div class="input-group input-group-sm mb-3 div-form-control">
                             <div class="input-group-prepend">
-                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Salida: </span>
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">{{"salida" | translate}}: </span>
                             </div>
                             <input type="date" class="form-control" aria-label="Small" id="fechaSalida" name="fechaSalida" [(ngModel)]="vuelo.fechaSalida" required>
                         </div>
 
                         <div class="input-group input-group-sm mb-3 div-form-control">
                             <div class="input-group-prepend">
-                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">Llegada: </span>
+                              <span class="input-group-text span-form" id="inputGroup-sizing-sm">{{"llegada" | translate}}: </span>
                             </div>
                             <input type="date" class="form-control" aria-label="Small" id="fechaLlegada" name="fechaLlegada" [(ngModel)]="vuelo.fechaLlegada" required>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-form-control" [disabled]="!flightFormFlight.form.valid">Aceptar</button>
+                                <button type="submit" class="btn btn-form-control" [disabled]="!flightFormFlight.form.valid">{{"aceptar" | translate}}</button>
                             </div>
                         </div>
                     </fieldset>

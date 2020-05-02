@@ -1,7 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<p class="select-align"> {{"idioma" | translate}}: 
+  <select [(ngModel)]='idioma' (change)='changeLan($event)'>
+    <option ([value])='es' selected>Es</option>
+    <option ([value])='en'>En</option>
+  </select>
+</p>
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    {{ "title" | translate}} !
   </h1>
   <img width="300" src="/assets/image/logo-avion.jpg">
 </div>
