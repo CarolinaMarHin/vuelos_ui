@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from "@angular/router";
 
 import { HttpClient } from '@angular/common/http';
+import { Pasajero } from 'src/app/models/pasajero';
 
 @Component({
   selector: 'app-ver-pasajero',
@@ -11,8 +13,8 @@ export class VerPasajeroComponent implements OnInit {
 
   pasajeros = [];
 
-  constructor(private http: HttpClient){
-    this.http.get('http://localhost:8090/pasajerosvuelo?idVuelo=' + '3').toPromise().then(data => {
+  constructor(private http: HttpClient, private route: ActivatedRoute, private router : Router){
+    this.http.get('http://localhost:8090/pasajerosvuelo?idVuelo=' + this.route.snapshot.paramMap.get("id")).toPromise().then(data => {
       let index = 0;
       for(let pasajero in data){
         this.pasajeros.push(data[index]);
@@ -20,8 +22,17 @@ export class VerPasajeroComponent implements OnInit {
       }
     });
   }
+  
+  ngOnInit() { 
+  }
 
-  ngOnInit() {
+  eliminarPasajero(idPasajero:number){
+    this.http.delete<Pasajero>('http://localhost:8090/eliminarpasajero/' + idPasajero).subscribe(
+      res => {
+        console.log(res);
+      }
+    );
+    window.location.reload();
   }
 
 }

@@ -11,7 +11,6 @@ import { NuevoVueloComponent } from './components/nuevo-vuelo/nuevo-vuelo.compon
 import { HttpClientModule} from '@angular/common/http';
 import { VerPasajeroComponent } from './components/ver-pasajero/ver-pasajero.component';
 import { MenuComponent } from './components/menu/menu.component'
-import { HomeComponent } from './components/home/home.components';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { HomeComponent } from './components/home/home.components';
     NuevoPasajeroComponent,
     NuevoVueloComponent,
     VerPasajeroComponent,
-    MenuComponent,
-    HomeComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,

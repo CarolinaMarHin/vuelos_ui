@@ -1,3 +1,15 @@
-.btn{
+.btn{ 
     margin-left: 5px;
+}
+
+.table-center{
+    text-align: center;
+}
+
+.btn-info-margin{
+    margin-bottom: 10px;
+}
+
+.div-center{
+    text-align-last: center;
 }

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
-                <form class="form-horizontal" (ngSubmit)="onSubmit(flightFormFlight)" #flightFormFlight="ngForm">
+                <form class="form-horizontal" (ngSubmit)="onSubmit()" #flightFormFlight="ngForm">
                     <fieldset>
                         <h3 class="text-center header">Datos Vuelo</h3>
 
@@ -10,7 +10,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text span-form" id="inputGroup-sizing-sm">Numero: </span>
                             </div>
-                            <input type="number" class="form-control" aria-label="Small" id="numero" name="numero" [(ngModel)]="vuelo.idVuelo" required>
+                            <input type="number" class="form-control" aria-label="Small" id="idVuelo" name="idVuelo" [(ngModel)]="vuelo.idVuelo" required>
                         </div>
                           
 
@@ -32,14 +32,14 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text span-form" id="inputGroup-sizing-sm">Salida: </span>
                             </div>
-                            <input type="date" class="form-control" aria-label="Small" id="fechasalida" name="fechasalida" [(ngModel)]="vuelo.fechaSalida" required>
+                            <input type="date" class="form-control" aria-label="Small" id="fechaSalida" name="fechaSalida" [(ngModel)]="vuelo.fechaSalida" required>
                         </div>
 
                         <div class="input-group input-group-sm mb-3 div-form-control">
                             <div class="input-group-prepend">
                               <span class="input-group-text span-form" id="inputGroup-sizing-sm">Llegada: </span>
                             </div>
-                            <input type="date" class="form-control" aria-label="Small" id="fechallegada" name="fechallegada" [(ngModel)]="vuelo.fechaLlegada" required>
+                            <input type="date" class="form-control" aria-label="Small" id="fechaLlegada" name="fechaLlegada" [(ngModel)]="vuelo.fechaLlegada" required>
                         </div>
 
                         <div class="form-group">

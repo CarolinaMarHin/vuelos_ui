@@ -1,8 +1,9 @@
 
 <div class="container">
     <div class="row">
-      <div class="col-12">
-        <table class="table table-bordered">
+      <div class="col-12 div-center">
+        <button type="button" class="btn btn-info btn-info-margin" [routerLink]="[ '/nuevovuelo' ]" routerLinkActive="active">Crear vuelo</button>
+        <table class="table table-bordered table-center">
           <thead>
             <tr>
               <th scope="col">Vuelo</th>
@@ -21,9 +22,9 @@
               <td>{{flight.fechaSalida}}</td>
               <td>{{flight.fechaLlegada}}</td>
               <td>
-                <button type="button" class="btn btn-primary" [routerLink]="[ '/verpasajerosvuelo' ]" routerLinkActive="active">Ver</button>
-                <button type="button" class="btn btn-success" [routerLink]="[ '/nuevovuelo' ]" routerLinkActive="active">Editar</button>
-                <button type="button" class="btn btn-danger">Eliminar</button>
+                <button type="button" class="btn btn-primary" [routerLink]="[ '/verpasajerosvuelo/', flight.idVuelo ]" routerLinkActive="active">Ver</button>
+                <button type="button" class="btn btn-success" [routerLink]="[ '/editarvuelo/', flight.idVuelo , flight.origen, flight.destino, flight.fechaSalida, flight.fechaLlegada ]" routerLinkActive="active">Editar</button>
+                <button type="button" class="btn btn-danger" (click)="eliminarVuelo(flight.idVuelo)">Eliminar</button>
               </td>
             </tr>
           </tbody>
